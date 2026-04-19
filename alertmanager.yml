@@ -1,0 +1,15 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  group_by: ["alertname"]
+  group_wait: 30s
+  group_interval: 5m
+  repeat_interval: 4h
+  receiver: "teletype-via-webhook"
+
+receivers:
+  - name: "teletype-via-webhook"
+    webhook_configs:
+      - url: "http://<адрес_адаптера>:5050/webhook"
+        send_resolved: true  # отправлять и resolved-алерты

@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  teletype-webhook:
+    build: .
+    container_name: grafana_teletype_webhook
+    ports:
+      - "5050:5050"
+    environment:
+      # ВАЖНО: Вставьте сюда ваш реальный токен и ID диалога
+      - TELETYPE_TOKEN=ВАШ_TOKEN_СЮДА
+      - TELETYPE_DIALOG_ID=ВАШ_DIALOG_ID_СЮДА
+    restart: unless-stopped

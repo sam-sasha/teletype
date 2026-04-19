@@ -1,6 +1,6 @@
 Как запустить
 
-Вариант запуска без кода
+Вариант запуска без docker
 ```
 export TELETYPE_TOKEN="TOKEN"
 export TELETYPE_DIALOG_ID="DIALOG_ID"
